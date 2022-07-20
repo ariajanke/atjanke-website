@@ -2,7 +2,13 @@
 // Sections
 // 
 
-section.resume-section {
+.resume-section, section.resume-section:target ~ #nav-home {
+    display: none;
+    // opacity: 0;
+    // transition: opacity 0.15s linear;
+}
+
+#nav-home, section.resume-section:target {
     display: flex;
     align-items: center;
     padding-left: 1rem;

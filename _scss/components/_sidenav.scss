@@ -88,7 +88,7 @@ input[name="nav-tab"] {
 // that would be far more maintainable
 // sadly ids must map to their respective targets
 // Is there a SASS function or some other utilities to make things easier?
-
+/*
 #home:not(:checked) ~ div > #nav-home,
 #bio-cv:not(:checked) ~ div > #nav-bio-cv,
 #projects:not(:checked) ~ div > #nav-projects,
@@ -132,7 +132,7 @@ input[name="nav-tab"] {
 }
 #navbar-off:checked ~ #navbar-off-button {
     display: none;
-}
+}*/
 
 label {
     margin: 8px;

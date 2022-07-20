@@ -2,11 +2,12 @@
 footer {
     color: $navbar-dark-active-color;
     a, .link-like {
-        color: $navbar-dark-color;
+        //color: $navbar-dark-color;
+        color: rgba(255, 255, 255, 0.9);
         cursor: pointer;
     }
     a:hover, .link-like:hover {
-        color: $navbar-dark-hover-color;
+        //color: $navbar-dark-hover-color;
         cursor: pointer;
     }
 }

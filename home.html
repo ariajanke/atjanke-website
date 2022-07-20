@@ -16,14 +16,45 @@
     <!-- The following are modifications specific for this site. -->
     <link rel="stylesheet" href="css/github-cards.css">
     <script src="assets/js/fedeperin-ghcards-mod.js"></script>
-    <script defer>load_github_cards()</script>
-</head><body id="page-top">
+    <script defer>
+        /*!
+         * The following is a modification of the "StartBootstrap" resume template.
+         *
+         * Start Bootstrap - Resume v7.0.5 (https://startbootstrap.com/theme/resume)
+         * Copyright 2013-2022 Start Bootstrap
+         * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+         * 
+         */
+        //
+        // Scripts
+        // 
+        window.addEventListener('DOMContentLoaded', event => {
+            load_github_cards();
+            // Activate Bootstrap scrollspy on the main nav element
+            const sideNav = document.body.querySelector('#sideNav');
+            if (sideNav) {
+                new bootstrap.ScrollSpy(document.body, {
+                    target: '#sideNav',
+                    offset: 74,
+                });
+            };
 
-<input type="radio" id="home" name="nav-tab" checked>
-<input type="radio" id="bio-cv" name="nav-tab">
-<input type="radio" id="projects" name="nav-tab">
-<input type="radio" id="code" name="nav-tab">
-<input type="radio" id="copyright" name="nav-tab">
+            // Collapse responsive navbar when toggler is visible
+            const navbarToggler = document.body.querySelector('.navbar-toggler');
+            const responsiveNavItems = [].slice.call(
+                document.querySelectorAll('#navbarResponsive .nav-link')
+            );
+            responsiveNavItems.map(function (responsiveNavItem) {
+                responsiveNavItem.addEventListener('click', () => {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- No reason this comment is here. :eyes: -->
+</head><body id="page-top">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#home">
@@ -34,41 +65,24 @@
     <input type="radio" id="navbar-on"  name="nav-toggle" class="nav-toggle invisible">
     <input type="radio" id="navbar-off" name="nav-toggle" class="nav-toggle invisible" checked>
 
-    <!-- ARIA-WAI attributes? -->
-    <label for="navbar-on" id="navbar-on-button" tabindex="0" class="navbar-toggler d-lg-none">
-        <span class="navbar-toggler-icon"></span>
-    </label>
-    <label for="navbar-off" id="navbar-off-button" tabindex="0" class="navbar-toggler d-lg-none">
-        <span class="navbar-toggler-icon"></span>
-    </label>
+    <!-- from the template: -->
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-            <li class="nav-item"><label for="home"><a class="nav-link js-scroll-trigger" >Home</a></label></li>
-            <li class="nav-item"><label for="bio-cv"><a class="nav-link js-scroll-trigger" >Bio + CV</a></label></li>
-            <li class="nav-item"><label for="projects"><a class="nav-link js-scroll-trigger" >Projects</a></label></li>
-            <li class="nav-item"><label for="code"><a class="nav-link js-scroll-trigger" >Code</a></label></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-home">Home</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-bio-cv">Bio + CV</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-code">Code</a></li>
         </ul>
     </div>
 </nav>
 <div class="container-fluid p-0">
-    <section class="resume-section fade" id="nav-home"><div class="resume-section-content">
-        <a class="d-lg-none" href="#" style="display:block;">
-            <span class="d-none d-sm-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/73004644.jpeg" width="230" alt="..." /></span>
-        </a>
-        <h1 class="mb-0">
-            Alex <span class="text-primary">Janke</span>, MD
-        </h1>
-        <div class="subheading mb-5">
-            <a href="mailto:name@email.com">name@email.com</a>
-            Ann Arbor, MI
-        </div>
-        <p class="lead mb-5">Anything we'd like to put down here, or nah?</p>
-    </div></section>
-    <section class="resume-section fade" id="nav-bio-cv"><div class="resume-section-content">
+    <!-- each section here, used to have "fade" class -->
+    <section class="resume-section" id="nav-bio-cv"><div class="resume-section-content">
         <h2>Bio</h2>
         <p>This is the bio section.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Eu consequat ac felis donec et odio pellentesque diam. Eget nunc lobortis mattis aliquam faucibus purus in. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Vel eros donec ac odio tempor orci dapibus.</p>
-        <h2>CV</h2>
+        <h2>Curriculum Vitae</h2>
         <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
                 <h3 class="mb-0">Job Title</h3>
@@ -78,7 +92,7 @@
             <div class="flex-shrink-0"><span class="text-primary">Start&nbsp;Time&nbsp;-&nbsp;End&nbsp;Time</span></div>
         </div>
     </div></section>
-    <section id="nav-projects" class="resume-section fade"><div class="resume-section-content">
+    <section id="nav-projects" class="resume-section"><div class="resume-section-content">
         <h2>Projects</h2>
         <div class="container"><div class="row">
             <div class="col-sm">
@@ -90,8 +104,9 @@
             </div>
         </div></div>
     </div></section>
-    <section id="nav-code" class="resume-section fade"><div class="resume-section-content">
+    <section id="nav-code" class="resume-section"><div class="resume-section-content">
         <h2>Projects on <a href="https://github.com/atjanke">Github</a></h2>
+        <p id="ghc-no-js-message">Some of the below information maybe out of date.</p>
         <section class="github-repo-cards" data-background="white" data-user="atjanke" style="background: white none repeat scroll 0% 0%;">
             <!-- begin insert for non-js website -->
             <div class="github-repo-card">
@@ -123,7 +138,6 @@
                 </div>
             </div>
             <!-- end insert for non-js website -->
-            <p>If you see this message, the above information maybe out of date.</p>
         </section>
     </div></section>
     <section id="nav-copyright" class="resume-section"><div class="resume-section-content">
@@ -141,47 +155,23 @@
         <p>License: MIT</p>
         <p>URL: <a href="https://github.com/fedeperin/github-repo-cards">https://github.com/fedeperin/github-repo-cards</a></p>
     </div></section>
+    <!-- default comes last -->
+    <section class="resume-section" id="nav-home"><div class="resume-section-content">
+        <a class="d-lg-none" href="#" style="display:block;">
+            <span class="d-none d-sm-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/73004644.jpeg" width="230" alt="..." /></span>
+        </a>
+        <h1 class="mb-0">
+            Alex <span class="text-primary">Janke</span>, MD
+        </h1>
+        <div class="subheading mb-5">
+            <a href="mailto:name@email.com">name@email.com</a>
+            Ann Arbor, MI
+        </div>
+        <p class="lead mb-5">Anything we'd like to put down here, or nah?</p>
+    </div></section>
 </div>
 <footer class="bg-primary fixed-bottom text-center ">
     <div class=" navbar-brand">
-        <small>Modifications <span class="d-none d-lg-inline">Copyright </span>&#169; Aria Janke 2022 - <span class="d-none d-lg-inline">MIT license - See </span><label for="copyright" class="link-like"><!--<a href="#">-->Credits<!--</a>--></label></small>
+        <small>Modifications <span class="d-none d-lg-inline">Copyright </span>&#169; Aria Janke 2022 - <span class="d-none d-lg-inline">MIT license - See </span><a href="#nav-copyright">Credits</a></small>
     </div>
-</footer>
-<script>
-
-// modifications maybe too significant at this point to use this...
-(() => {
-
-// need a css solution, even if it does not look "good"
-window.addEventListener('DOMContentLoaded', event => {
-
-// Activate Bootstrap scrollspy on the main nav element
-const sideNav = document.body.querySelector('#sideNav');
-if (sideNav) {
-    new bootstrap.ScrollSpy(document.body, {
-        target: '#sideNav',
-        offset: 74,
-    });
-};
-
-// Collapse responsive navbar when toggler is visible
-const navbarToggler = document.body.querySelector('.navbar-toggler');
-const responsiveNavItems = [].slice.call(
-    document.querySelectorAll('#navbarResponsive .nav-link')
-);
-responsiveNavItems.map((responsiveNavItem) => {
-    responsiveNavItem.addEventListener('click', () => {
-        if (window.getComputedStyle(navbarToggler).display !== 'none') {
-            navbarToggler.click();
-        }
-    });
-    responsiveNavItem.addEventListener('mouseleave', () => {
-
-    });
-});
-
-});
-
-});
-</script>
-</body></html>
+</footer></body></html>
