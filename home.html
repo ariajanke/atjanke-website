@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dr Alex Janke</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- This page must be able to work without JavaScript! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Original: https://github.com/fedeperin/github-repo-cards -->
+    <!-- The following are modifications specific for this site. -->
+    <link rel="stylesheet" href="css/github-cards.css">
+    <script src="assets/js/fedeperin-ghcards-mod.js"></script>
+    <script defer>load_github_cards()</script>
+</head><body id="page-top">
+
+<input type="radio" id="home" name="nav-tab" checked>
+<input type="radio" id="bio-cv" name="nav-tab">
+<input type="radio" id="projects" name="nav-tab">
+<input type="radio" id="code" name="nav-tab">
+<input type="radio" id="copyright" name="nav-tab">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#home">
+        <span class="d-block d-lg-none">Alex Janke, MD</span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/73004644.jpeg" alt="..." /></span>
+    </a>
+
+    <input type="radio" id="navbar-on"  name="nav-toggle" class="nav-toggle invisible">
+    <input type="radio" id="navbar-off" name="nav-toggle" class="nav-toggle invisible" checked>
+
+    <!-- ARIA-WAI attributes? -->
+    <label for="navbar-on" id="navbar-on-button" tabindex="0" class="navbar-toggler d-lg-none">
+        <span class="navbar-toggler-icon"></span>
+    </label>
+    <label for="navbar-off" id="navbar-off-button" tabindex="0" class="navbar-toggler d-lg-none">
+        <span class="navbar-toggler-icon"></span>
+    </label>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item"><label for="home"><a class="nav-link js-scroll-trigger" >Home</a></label></li>
+            <li class="nav-item"><label for="bio-cv"><a class="nav-link js-scroll-trigger" >Bio + CV</a></label></li>
+            <li class="nav-item"><label for="projects"><a class="nav-link js-scroll-trigger" >Projects</a></label></li>
+            <li class="nav-item"><label for="code"><a class="nav-link js-scroll-trigger" >Code</a></label></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid p-0">
+    <section class="resume-section fade" id="nav-home"><div class="resume-section-content">
+        <a class="d-lg-none" href="#" style="display:block;">
+            <span class="d-none d-sm-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/73004644.jpeg" width="230" alt="..." /></span>
+        </a>
+        <h1 class="mb-0">
+            Alex <span class="text-primary">Janke</span>, MD
+        </h1>
+        <div class="subheading mb-5">
+            <a href="mailto:name@email.com">name@email.com</a>
+            Ann Arbor, MI
+        </div>
+        <p class="lead mb-5">Anything we'd like to put down here, or nah?</p>
+    </div></section>
+    <section class="resume-section fade" id="nav-bio-cv"><div class="resume-section-content">
+        <h2>Bio</h2>
+        <p>This is the bio section.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Eu consequat ac felis donec et odio pellentesque diam. Eget nunc lobortis mattis aliquam faucibus purus in. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Vel eros donec ac odio tempor orci dapibus.</p>
+        <h2>CV</h2>
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">Job Title</h3>
+                <div class="subheading mb-3">Company Name</div>
+                <p>Blurb describing job duties/accomplishments.</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">Start&nbsp;Time&nbsp;-&nbsp;End&nbsp;Time</span></div>
+        </div>
+    </div></section>
+    <section id="nav-projects" class="resume-section fade"><div class="resume-section-content">
+        <h2>Projects</h2>
+        <div class="container"><div class="row">
+            <div class="col-sm">
+                <h3 class="mb-0">Project Title</h3>
+                <p>Something interesting about the project.</p>
+            </div>
+            <div class="col-sm">
+                <img src="assets/img/tree-16.png" alt="A pragmatically generated tree">
+            </div>
+        </div></div>
+    </div></section>
+    <section id="nav-code" class="resume-section fade"><div class="resume-section-content">
+        <h2>Projects on <a href="https://github.com/atjanke">Github</a></h2>
+        <section class="github-repo-cards" data-background="white" data-user="atjanke" style="background: white none repeat scroll 0% 0%;">
+            <!-- begin insert for non-js website -->
+            <div class="github-repo-card">
+                <div>
+                    <a href="https://github.com/atjanke/uds-use-in-chest-pain">atjanke/uds-use-in-chest-pain</a>
+                    <p class="desc">Exploring the utilization of urine drug screen for patients presenting to EDs with chest pain in the United States</p>
+                </div>
+                <div class="forks-stars-lang">
+                    <p class="lang"><span class="lang-color R"></span> R</p>  
+                    <a class="forks stars-forks" href="https://github.com/atjanke/uds-use-in-chest-pain/network/members"><svg viewBox="0 0 16 16"><path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path></svg> <span>1</span></a>
+                </div>
+            </div>
+            <div class="github-repo-card">
+                <div>
+                    <a href="https://github.com/atjanke/NEDS-social-determinants-of-health">atjanke/NEDS-social-determinants-of-health</a>
+                    <p class="desc">Exploratory analysis for utilization of codes for social determinants of health</p>
+                </div>
+                <div class="forks-stars-lang">
+                    <p class="lang"><span class="lang-color R"></span> R</p>        
+                </div>
+            </div>
+            <div class="github-repo-card">
+                <div>
+                    <a href="https://github.com/atjanke/NEDS-Syncope">atjanke/NEDS-Syncope</a>
+                    <p class="desc">Exploratory data analysis of patients 18 to 49 years old with primary diagnosis syncope in the 2019 Nationwide Emergency Department Sample</p>
+                </div>
+                <div class="forks-stars-lang">
+                    <p class="lang"><span class="lang-color R"></span> R</p>  
+                </div>
+            </div>
+            <!-- end insert for non-js website -->
+            <p>If you see this message, the above information maybe out of date.</p>
+        </section>
+    </div></section>
+    <section id="nav-copyright" class="resume-section"><div class="resume-section-content">
+        <h2>Copyright and Credits</h2>
+        <p>All modifications, and further this work is released under the MIT license. Anyone may use/build upon it for any purpose, provided they credit all authors involved in this work.</p>
+        <h3 class="mb-0">Single Page Navigation by CSS only</h3>
+        <div class="subheading mb-3">Siong-Ui Te</div>
+        <p>License: "unlicense"</p>
+        <p>URL: <a href="https://siongui.github.io/2018/10/01/css-only-toggle-bootstrap-tab-panel/" target="blank_">https://siongui.github.io/2018/10/01/css-only-toggle-bootstrap-tab-panel/</a></p>
+        <h3 class="mb-0">Site Template</h3>
+        <div class="subheading mb-3">StartBootstrap LLC</div>
+        <p>License: MIT</p>
+        <p>URL: <a href="https://github.com/startbootstrap/startbootstrap-resume">https://github.com/startbootstrap/startbootstrap-resume</a></p>
+        <h3 class="mb-0">fedeperin cards for Github repos</h3>
+        <p>License: MIT</p>
+        <p>URL: <a href="https://github.com/fedeperin/github-repo-cards">https://github.com/fedeperin/github-repo-cards</a></p>
+    </div></section>
+</div>
+<footer class="bg-primary fixed-bottom text-center ">
+    <div class=" navbar-brand">
+        <small>Modifications <span class="d-none d-lg-inline">Copyright </span>&#169; Aria Janke 2022 - <span class="d-none d-lg-inline">MIT license - See </span><label for="copyright" class="link-like"><!--<a href="#">-->Credits<!--</a>--></label></small>
+    </div>
+</footer>
+<script>
+
+// modifications maybe too significant at this point to use this...
+(() => {
+
+// need a css solution, even if it does not look "good"
+window.addEventListener('DOMContentLoaded', event => {
+
+// Activate Bootstrap scrollspy on the main nav element
+const sideNav = document.body.querySelector('#sideNav');
+if (sideNav) {
+    new bootstrap.ScrollSpy(document.body, {
+        target: '#sideNav',
+        offset: 74,
+    });
+};
+
+// Collapse responsive navbar when toggler is visible
+const navbarToggler = document.body.querySelector('.navbar-toggler');
+const responsiveNavItems = [].slice.call(
+    document.querySelectorAll('#navbarResponsive .nav-link')
+);
+responsiveNavItems.map((responsiveNavItem) => {
+    responsiveNavItem.addEventListener('click', () => {
+        if (window.getComputedStyle(navbarToggler).display !== 'none') {
+            navbarToggler.click();
+        }
+    });
+    responsiveNavItem.addEventListener('mouseleave', () => {
+
+    });
+});
+
+});
+
+});
+</script>
+</body></html>

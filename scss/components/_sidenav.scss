@@ -1,0 +1,142 @@
+// 
+// Sidenav
+// 
+
+#sideNav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .navbar-nav .nav-item .nav-link {
+        font-weight: 800;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+    }
+
+    .navbar-toggler {
+        &:focus {
+            outline-color: lighten($primary, 15%);
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    #sideNav {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        width: $sidebar-base-width;
+        height: 100vh;
+
+        .navbar-brand {
+            display: flex;
+
+            margin: auto auto 0;
+            padding: 0.5rem;
+
+            .img-profile {
+                max-width: 10rem;
+                max-height: 10rem;
+                border: 0.5rem solid fade-out($white, 0.8);
+            }
+        }
+
+        .navbar-collapse {
+            display: flex;
+            align-items: flex-start;
+            flex-grow: 0;
+
+            width: 100%;
+            margin-bottom: auto;
+
+            .navbar-nav {
+                flex-direction: column;
+
+                width: 100%;
+
+                .nav-item {
+                    display: block;
+
+                    .nav-link {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// edit here
+.nav-item label {
+    width: 100%;
+    cursor: pointer;
+    margin: 0px;
+}
+
+// there ought be a way to do this for classes rather than id
+input[name="nav-tab"] {
+    display: none;
+}
+
+// Is there a way to do this with class names and not ids
+// that would be far more maintainable
+// sadly ids must map to their respective targets
+// Is there a SASS function or some other utilities to make things easier?
+
+#home:not(:checked) ~ div > #nav-home,
+#bio-cv:not(:checked) ~ div > #nav-bio-cv,
+#projects:not(:checked) ~ div > #nav-projects,
+#code:not(:checked) ~ div > #nav-code,
+#copyright:not(:checked) ~ div > #nav-copyright {
+    display: none;
+}
+
+#home:checked ~ div > #nav-home,
+#bio-cv:checked ~ div > #nav-bio-cv,
+#projects:checked ~ div > #nav-projects,
+#code:checked ~ div > #nav-code,
+#copyright:checked ~ div > #nav-copyright {
+    display: block;
+    opacity: 1;
+}
+
+#navbar-on:checked ~ #navbarResponsive {
+    //height: 0px;
+    max-height: 230px;
+    display: block;
+}
+#navbar-on:checked ~ #navbar-on-button {
+    display: none;
+}
+#navbar-on:checked ~ #navbar-off-button {
+    display: block;
+}
+
+#navbar-off:checked ~ #navbarResponsive {
+    height: auto;
+    max-height: 0px;
+}
+#navbarResponsive {
+    transition: max-height 0.5s linear;
+    //display: block;
+}
+
+#navbar-off:checked ~ #navbar-on-button {
+    display: block;
+}
+#navbar-off:checked ~ #navbar-off-button {
+    display: none;
+}
+
+label {
+    margin: 8px;
+}
+.navbar-toggler {
+    padding: 8px 12px 8px 12px;
+}

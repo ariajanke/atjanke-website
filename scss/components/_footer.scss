@@ -1,0 +1,12 @@
+// entirely new file
+footer {
+    color: $navbar-dark-active-color;
+    a, .link-like {
+        color: $navbar-dark-color;
+        cursor: pointer;
+    }
+    a:hover, .link-like:hover {
+        color: $navbar-dark-hover-color;
+        cursor: pointer;
+    }
+}
