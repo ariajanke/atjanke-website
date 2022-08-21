@@ -55,19 +55,19 @@ const load_github_cards = () => {
         .then(res => res.json())
         .then(repos => {
                 repos.forEach(repo => {
-                    if(repo.stargazers_count > 0 || repo.forks > 0) {
+                    if (repo.stargazers_count > 0 || repo.forks > 0) {
                         popular.push(repo)
-                    }else {
+                    } else {
                         unpopular.push(repo)
                     }
                 })
         
-                if(popular.length < 6) {
-                    for(let i = 0; i <= 6 - popular.length; i++) {
+                if (popular.length < 6) {
+                    for (let i = 0; i <= 6 - popular.length; i++) {
                         popular.push(unpopular[i])
                     }
                 } else {
-                    for(let i = 6; i <= popular.length; i++) {
+                    for (let i = 6; i <= popular.length; i++) {
                         popular.splice(i)
                     }
                 }
@@ -80,6 +80,7 @@ const load_github_cards = () => {
                 githubRepoCard.innerHTML = ''
                 
                 document.getElementById('ghc-no-js-message').remove()
+                
                 // end modifications
 
                 popular.forEach(pop => {

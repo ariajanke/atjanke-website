@@ -53,3 +53,36 @@ section {
         display: block;
     }
 }
+
+ul.legend li {
+    display: grid;
+    grid-template-columns: 30px auto;
+
+    .thirty-min-trans {
+        background-color: #9bace2;
+    }
+    .zero-ten {
+        background-color: white;
+    }
+    .ten-twenty {
+        background-color: #f9e3e2;
+    }
+    .twenty-thirty {
+        background-color: #f4c7c6;
+    }
+    .thirty-forty {
+        background-color: #f0aca8;
+    }
+    .forty-plus {
+        background-color: #ec908a;
+    }
+    :nth-child(1) {
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+    }
+    :nth-child(2) {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+}
