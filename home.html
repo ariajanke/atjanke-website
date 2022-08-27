@@ -30,6 +30,7 @@
         // 
         window.addEventListener('DOMContentLoaded', event => {
             load_github_cards();
+            if (false) {
             // Activate Bootstrap scrollspy on the main nav element
             const sideNav = document.body.querySelector('#sideNav');
             if (sideNav) {
@@ -38,13 +39,13 @@
                     offset: 74,
                 });
             };
+            }
 
             // Collapse responsive navbar when toggler is visible
             const navbarToggler = document.body.querySelector('.navbar-toggler');
             const responsiveNavItems = [].slice.call(
-                document.querySelectorAll('#navbarResponsive .nav-link')
-            );
-            responsiveNavItems.map(function (responsiveNavItem) {
+                document.querySelectorAll('#navbarResponsive .nav-link'));
+            responsiveNavItems.map((responsiveNavItem) => {
                 responsiveNavItem.addEventListener('click', () => {
                     if (window.getComputedStyle(navbarToggler).display !== 'none') {
                         navbarToggler.click();
@@ -54,7 +55,7 @@
         });
     </script>
     <!-- No reason this comment is here. :eyes: -->
-</head><body id="page-top">
+</head><body id="page-top" style="position: relative;">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#nav-home">
@@ -69,11 +70,11 @@
 
     <!-- from the template: -->
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarResponsive" role="navigation">
+        <ul class="navbar-nav nav">
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-home">Home</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-bio-cv">Bio + CV</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-bio-cv">Bio &plus; CV</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-projects">Select Projects</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#nav-code">Code</a></li>
         </ul>
     </div>
@@ -89,43 +90,57 @@
 
     </div></section>
     <section id="nav-projects" class="resume-section"><div class="resume-section-content">
-        <h2>Projects</h2>
-        <div class="container"><div class="row">
+        <h2>Select Projects</h2>
+        <div class="container select-project"><div class="row">
             <div class="col-sm">
                 <h3 class="mb-0">Consequences of Health System Strain</h3>
                 <p>My most recent work has focused on health system strain, broadly defined and inclusive of bed capacity restraints as well as emergency department boarding and crowding, during COVID-19. In the Journal of Hospital Medicine, our team reported that geographic areas with fewer intensive care unit beds per COVID-19 case had greater COVID-19 death rates in the early pandemic period. Ongoing work in this space is now supported by a Society for Academic Emergency Medicine Foundation Emerging Infectious Disease and Disaster Preparedness grant mechanism with my academic mentor from Yale, Arjun Venkatesh MD MBA MHS (Principal Investigator).</p>
             </div>
-            <div class="col-sm">
-                <p>Paywalled Content</p>
-                <p>Lemme know how I should handle this issue.</p>
+            <div class="col-sm container">
+                <div class="col-sm container">
+                    <div class="col-sm">
+                        <h4>Excess Deaths by Hospital Referral Region</h4>
+                        <ul class="legend-system-strain">
+                            <li><div class="zero"></div><div>0</div></li>
+                            <li><div class="one-onehundred"></div><div>1 - 100</div></li>
+                            <li><div class="onehundred-fivehundred"></div><div>100 - 500</div></li>
+                            <li><div class="fivehundred-thousand"></div><div>500 - 1000</div></li>
+                            <li><div class="thousand-plus"></div> 1000+</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm">
+                        <h4>Area around New York City</h4>
+                        <img src="assets/img/area-around-nyc.jpg" alt="Figure showing excess deaths in the area around NYC.">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <h4>Contiguous US</h4>
+                    <img src="assets/img/contiguous-us.jpg" alt="Figure showing excess deaths around contiguous US.">
+                </div>
                 <a href="https://shmpublications.onlinelibrary.wiley.com/doi/pdf/10.12788/jhm.3539" target="_blank">Full Paper</a>
-                <img src="assets/img/tree-16.png" alt="A pragmatically generated tree">
             </div>
         </div></div>
-
-        <div class="container"><div class="row">
+        <div class="container select-project"><div class="row">
             <div class="col-sm">
                 <h3 class="mb-0">Transportation Accessibility of COVID-19 Vaccination</h3>
-                <p>When the first mRNA vaccines were distributed for COVID-19, I was asked by the Yale Medicine’s Director of Population Health, Brita Roy MD MPH MHS, to generate reports on the distribution of existing vaccination clinics, and their accessibility by public transit. I pulled together a team with the requisite statistical and content-area expertise to provide the Yale team with useful insights. We plotted existing vaccination sites alongside ‘isochrones’ for 30-minute travel time by public transportation. This involved writing Python scripts to ‘scrap’ geospatial data on vaccination clinics, generating the ‘isochrones’ for 30-minute travel time in qGIS, and characterizing populations at the census tract level with data from the American Community Survey. While this did not ultimately result in an academic publication, this was one of my most inspired projects.</p>
+                <p>When the first mRNA vaccines were distributed for COVID-19, I was asked by the Yale Medicine's Director of Population Health, Brita Roy MD MPH MHS, to generate reports on the distribution of existing vaccination clinics, and their accessibility by public transit. I pulled together a team with the requisite statistical and content-area expertise to provide the Yale team with useful insights. We plotted existing vaccination sites alongside ‘isochrones’ for 30-minute travel time by public transportation. This involved writing Python scripts to ‘scrap’ geospatial data on vaccination clinics, generating the ‘isochrones’ for 30-minute travel time in qGIS, and characterizing populations at the census tract level with data from the American Community Survey. While this did not ultimately result in an academic publication, this was one of my most inspired projects.</p>
             </div>
             <div class="col-sm">
                 <h4>Legend</h4>
                 <div>
-                    <ul class="legend">
-                        <!-- webbie gods forgive me -->
-                        <li><div style="border: none; text-align: center; color: black;"> &#x2022; </div><div>Vaccination Sites</div></li>
+                    <ul class="legend-trans-access">
+                        <li><div class="vaccination-sites"> &#x2022; </div><div>Vaccination Sites</div></li>
                         <li><div class="thirty-min-trans"></div>
                             <div>30 Minute Public Transit Distance</div></li>
                     </ul>
                     Percent Households Without Vehicle
-                    <ul class="legend">
+                    <ul class="legend-trans-access without-vechicle">
                         <li><div class="zero-ten"></div><div>0-10%</div></li>
                         <li><div class="ten-twenty"></div><div>10-20%</div></li>
                         <li><div class="twenty-thirty"></div><div>20-30%</div></li>
                         <li><div class="thirty-forty"></div><div>30-40%</div></li>
                         <li><div class="forty-plus"></div> 40%+</li>
                     </ul>
-
                 </div>
                 <h4>New Haven</h4>
                 <img src="assets/img/vaccine-access-in-new-haven.jpg" alt="Figure of New Haven, highlighting areas of households without a vehicle and public transportation." width="50%">
@@ -133,8 +148,7 @@
                 <img src="assets/img/vaccine-access-in-bridgeport.jpg" alt="Figure of Bridgeport, highlighting areas of households without a vehicle and public transportation." width="50%">
             </div>
         </div></div>
-
-        <div class="container"><div class="row">
+        <div class="container select-project"><div class="row">
             <div class="col-sm">
                 <h3 class="mb-0">Health Literacy</h3>
                 <p>My earliest academic projects were with Helen Levy PhD at the Institute for Social Research, where I worked for a short time as a research assistant. We used data from the 
@@ -146,52 +160,25 @@
                     in older adults. These were my first foray into methodological tools in health services research on topics of lasting importance for the U.S. healthcare system.</p>
             </div>
             <div class="col-sm">
-
-                <table class="table"><thead><tr><th rowspan="2" colspan="2">&nbsp;</th><th colspan="3" scope="col">
-                    Health literacy*
-                  </th></tr><tr><th scope="col">
-                    Low
-                  </th><th scope="col">
-                    Not low
-                  </th><th scope="col">
-                    
-                      <em>P</em> value
-                  </th></tr></thead><tbody><tr><th scope="row">
-                    1
-                  </th><td>
-                    Probability of regular Internet use (general population; <i>n</i> = 812)
-                  </td><td>
-                    0.220
-                  </td><td>
-                    0.548
-                  </td><td>
-                    
-                      <em>P</em>&nbsp;&lt;&nbsp;0.001
-                  </td></tr><tr><th scope="row">
-                    2
-                  </th><td>
-                    Probability of obtaining health/medical info from Internet (Internet users only; <i>n</i> = 1,563)
-                  </td><td>
-                    0.440
-                  </td><td>
-                    0.582
-                  </td><td>
-                    
-                      <em>P</em>&nbsp;&lt;&nbsp;0.001
-                  </td></tr><tr><th scope="row">
-                    3
-                  </th><td>
+                <table class="table"><thead><tr><th rowspan="2" colspan="2">&nbsp;</th>
+                    <th colspan="3" scope="col">Health literacy*</th>
+                </tr><tr>
+                    <th scope="col">Low</th><th scope="col">Not low</th><th scope="col"><em>P</em>&nbsp;value</th></tr>
+                </thead><tbody><tr>
+                    <th scope="row">1</th><td>
+                    Probability of regular Internet use (general population; <span class="fst-italic">n</span> = 812)
+                </td><td>0.220</td><td>0.548</td><td><span class="fst-italic">P</span>&nbsp;&lt;&nbsp;0.001
+                </td></tr><tr>
+                    <th scope="row">2</th><td>
+                    Probability of obtaining health/medical info from Internet (Internet users only; <span class="fst-italic">n</span> = 1,563)
+                </td><td>0.440</td><td>0.582</td><td><span class="fst-italic">P</span>&nbsp;&lt;&nbsp;0.001
+                </td></tr><tr>
+                    <th scope="row">3</th><td>
                     Probability of obtaining health/medical info from Internet (general population) [row 1 times row 2]
-                  </td><td>
-                    0.097
-                  </td><td>
-                    0.319
-                  </td><td>
-                    
-                      <i>P</i>&nbsp;&lt;&nbsp;0.001
-                  </td></tr></tbody></table>
-                  <p>*Health literacy defined as in the self-assessed measure</p>
-                  <a href="https://link.springer.com/article/10.1007/s11606-014-3069-5" target="_blank">Source</a>
+                </td><td>0.097</td><td>0.319</td><td><span class="fst-italic">P</span>&nbsp;&lt;&nbsp;0.001
+                </td></tr></tbody></table>
+                <p>*Health literacy defined as in the self-assessed measure</p>
+                <a href="https://link.springer.com/article/10.1007/s11606-014-3069-5" target="_blank">Source</a>
             </div>
         </div></div>
     </div></section>
@@ -233,9 +220,10 @@
     </div></section>
     <section id="nav-copyright" class="resume-section"><div class="resume-section-content">
         <h2>Copyright and Credits</h2>
-        <p>All site <em>content</em> is by no means &quot;open source&quot;. It is all Copyright &copy; Alexander T. Janke 2022, All Rights Reserved.</p>
+        <h3 class="mb-0">Site Content</h3>
+        <p>All site content is Copyright &copy; Alexander T. Janke 2022, All Rights Reserved.</p>
         <h3 class="mb-0">Site Code</h3>
-        <p>All modifications, and further this work is released under the MIT license. Anyone may use/build upon it for any purpose, provided they credit all authors involved in this work, and all of Alexander's content removed.</p>
+        <p>All modifications, and further work is released under the MIT license. Anyone may use/build upon it for any purpose, provided they credit all authors involved in this work, and all of Alexander's content is removed.</p>
         <h3 class="mb-0">Single Page Navigation by CSS only</h3>
         <div class="subheading mb-3">Siong-Ui Te</div>
         <p>License: "unlicense"</p>
@@ -265,6 +253,6 @@
 </div>
 <footer class="bg-primary fixed-bottom text-center ">
     <div class=" navbar-brand">
-        <small>Modifications <span class="d-none d-lg-inline">Copyright </span>&#169; Aria Janke 2022 - <span class="d-none d-lg-inline">MIT license - See </span><a href="#nav-copyright">Credits</a></small>
+        <small><span class="d-none d-lg-inline">Copyright </span>&#169; Aria Janke 2022 - <a href="#nav-copyright">See Credits</a></small>
     </div>
 </footer></body></html>
