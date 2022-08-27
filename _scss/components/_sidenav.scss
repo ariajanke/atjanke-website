@@ -7,9 +7,15 @@
     padding-right: 1rem;
 
     .navbar-nav .nav-item .nav-link {
-        font-weight: 800;
+        font-weight: 600;
         letter-spacing: 0.05rem;
         text-transform: uppercase;
+
+        color: #eee;
+    }
+    .nav-link:hover {
+        color: white;
+        text-decoration: underline;
     }
 
     .navbar-toggler {
@@ -83,56 +89,6 @@
 input[name="nav-tab"] {
     display: none;
 }
-
-// Is there a way to do this with class names and not ids
-// that would be far more maintainable
-// sadly ids must map to their respective targets
-// Is there a SASS function or some other utilities to make things easier?
-/*
-#home:not(:checked) ~ div > #nav-home,
-#bio-cv:not(:checked) ~ div > #nav-bio-cv,
-#projects:not(:checked) ~ div > #nav-projects,
-#code:not(:checked) ~ div > #nav-code,
-#copyright:not(:checked) ~ div > #nav-copyright {
-    display: none;
-}
-
-#home:checked ~ div > #nav-home,
-#bio-cv:checked ~ div > #nav-bio-cv,
-#projects:checked ~ div > #nav-projects,
-#code:checked ~ div > #nav-code,
-#copyright:checked ~ div > #nav-copyright {
-    display: block;
-    opacity: 1;
-}
-
-#navbar-on:checked ~ #navbarResponsive {
-    //height: 0px;
-    max-height: 230px;
-    display: block;
-}
-#navbar-on:checked ~ #navbar-on-button {
-    display: none;
-}
-#navbar-on:checked ~ #navbar-off-button {
-    display: block;
-}
-
-#navbar-off:checked ~ #navbarResponsive {
-    height: auto;
-    max-height: 0px;
-}
-#navbarResponsive {
-    transition: max-height 0.5s linear;
-    //display: block;
-}
-
-#navbar-off:checked ~ #navbar-on-button {
-    display: block;
-}
-#navbar-off:checked ~ #navbar-off-button {
-    display: none;
-}*/
 
 label {
     margin: 8px;
